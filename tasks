@@ -1,0 +1,49 @@
+#frequency analysis of a sentence 
+
+string = "You can have data without information, but you cannot have information without data."
+string = string.lower() #convert string to lower case 
+
+print(string) 
+
+alphabet = {"a": 0, "b": 0, "c": 0, "d": 0, "e": 0, "f": 0, "g": 0, "h": 0, "i": 0, "j": 0, "k": 0, "l": 0, "m": 0, "n": 0, "o": 0, "p": 0, "q": 0, "r": 0, "s": 0, "t": 0, "u": 0, "v": 0, "w": 0, "x": 0, "y": 0, "z": 0}
+ 
+for letter in string:
+  if letter in alphabet:
+    alphabet[letter] += 1
+
+for letter in alphabet:    
+  if alphabet[letter] != 0:
+    print(str(letter) + ": " + str(alphabet[letter]))
+
+---
+    
+#printing identity matrix
+
+n=int(input("Please enter a whole number"))
+
+print()
+print("Identity matrix:") 
+for row in range(0, n):
+  for col in range(0, n):
+                 
+    if (row == col):
+      print("1 ", end=" ")
+    else:
+      print("0 ", end=" ")
+  print()   
+  
+  
+#printing mirror of identity matrix 
+  
+n=int(input("Please enter a whole number"))
+
+print()
+print("Identity matrix:") 
+for row in range(0, n):
+  for col in range(0, n):
+                 
+    if (row + col + 1 == n):
+      print("1 ", end=" ")
+    else:
+      print("0 ", end=" ")
+  print()  
